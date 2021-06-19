@@ -30,7 +30,7 @@ namespace Moto_Logo
 
         private bool _fileSaved;
         private bool _autoselectlogobinversion = true;
-        private int _maxFileSize = 4*1024*1024; //4MiB
+        private int _maxFileSize = 32*1024*1024; //4MiB
         
         private readonly List<String> _loadedbitmapnames = new List<string>(); 
         private readonly List<Bitmap> _loadedbitmaps = new List<Bitmap>();
@@ -381,7 +381,7 @@ namespace Moto_Logo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Init_cboMoto("Custom",720,1280,4194304,0x3FFFFFFF);
+            Init_cboMoto("Custom", 720, 1280, 32*1024*1024, 0x3FFFFFFF);
             Init_cboMoto("Moto X Style (3rd Gen)", 1440, 2560, 8388608, (int)(LOGO.LOGO_BOOT | LOGO.LOGO_BATTERY | LOGO.LOGO_UNLOCKED | LOGO.LOGO_LOWPOWER | LOGO.LOGO_CHARGE));
             Init_cboMoto("Moto X Play (3rd Gen)", 1080, 1920, 6291456, (int)(LOGO.LOGO_BOOT | LOGO.LOGO_BATTERY | LOGO.LOGO_UNLOCKED | LOGO.LOGO_LOWPOWER | LOGO.LOGO_CHARGE));
             Init_cboMoto("Moto X (2nd Gen)", 1080, 1920, 4194304, (int)(LOGO.LOGO_BOOT | LOGO.LOGO_BATTERY | LOGO.LOGO_UNLOCKED | LOGO.LOGO_LOWPOWER | LOGO.LOGO_CHARGE));
